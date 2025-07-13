@@ -111,15 +111,17 @@
     </div>
   </section>
 
-  <section id="contact" class="bg-gray-100 py-16">
-    <div class="container mx-auto px-6 max-w-xl">
-      <h3 class="text-3xl font-semibold mb-6">Get in Touch</h3>
-      <form class="space-y-4" action="mailto:youremail@example.com" method="POST" enctype="text/plain">
-        <input class="w-full p-3 border border-gray-300 rounded" type="text" name="name" placeholder="Your Name" required>
-        <input class="w-full p-3 border border-gray-300 rounded" type="email" name="email" placeholder="Your Email" required>
-        <textarea class="w-full p-3 border border-gray-300 rounded" name="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">Send</button>
-      </form>
+<form action="https://formsubmit.co/contact@pedrogutierrez.pro" method="POST">
+  <input type="text" name="name" placeholder="Your name" required>
+  <input type="email" name="email" placeholder="Your email" required>
+  <textarea name="message" placeholder="Your message" required></textarea>
+  
+  <!-- Optional redirect after submit -->
+  <input type="hidden" name="_next" value="https://www.pedrogutierrez.pro/thank-you.html">
+  
+  <button type="submit">Send</button>
+</form>
+
     </div>
   </section>
 </body>
