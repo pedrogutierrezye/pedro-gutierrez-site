@@ -6,17 +6,30 @@
   <title>Pedro Gutierrez | Finance. Transformation. Growth.</title>
   <meta name="description" content="Pedro Gutierrez is a finance leader driving business transformation, ERP integration, and investment strategy across Europe and Latin America." />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <script>
+    function toggleMenu() {
+      const navMenu = document.getElementById('nav-menu');
+      navMenu.classList.toggle('hidden');
+    }
+  </script>
 </head>
 <body class="bg-white text-gray-800 font-sans">
   <header class="bg-gray-900 text-white p-6 shadow">
-    <div class="container mx-auto flex flex-col sm:flex-row justify-between items-center">
-      <h1 class="text-2xl font-bold mb-4 sm:mb-0">Pedro Gutierrez</h1>
-      <nav>
-        <ul class="flex flex-col sm:flex-row sm:space-x-6 space-y-2 sm:space-y-0">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Pedro Gutierrez</h1>
+      <button class="md:hidden focus:outline-none" onclick="toggleMenu()">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+      <nav id="nav-menu" class="hidden md:flex space-x-6 md:space-x-6 md:items-center">
+        <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
           <li><a href="#about" class="hover:text-gray-300">About</a></li>
           <li><a href="#services" class="hover:text-gray-300">Services</a></li>
           <li><a href="#projects" class="hover:text-gray-300">Projects</a></li>
           <li><a href="#education" class="hover:text-gray-300">Education</a></li>
+          <li><a href="#testimonials" class="hover:text-gray-300">Testimonials</a></li>
+          <li><a href="#articles" class="hover:text-gray-300">Articles</a></li>
           <li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
         </ul>
       </nav>
@@ -29,6 +42,7 @@
       <p class="text-lg max-w-2xl mx-auto">Empowering companies to transform finance operations, streamline processes, and unlock strategic value — across Europe and Latin America.</p>
     </div>
   </section>
+
   
   <section class="py-16 bg-gray-50">
     <div class="container mx-auto px-6 text-center">
