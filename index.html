@@ -1,195 +1,405 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pedro Gutierrez | Finance. Transformation. Growth.</title>
-  <meta name="description" content="Pedro Gutierrez is a finance leader driving business transformation, ERP integration, and investment strategy across Europe and Latin America." />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-  <script>
-    function toggleMenu() {
-      const navMenu = document.getElementById('nav-menu');
-      navMenu.classList.toggle('hidden');
-    }
-  </script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pedro Gutierrez · Finance &amp; transformation leader</title>
+<meta name="description" content="Pedro Gutierrez is a finance and transformation leader with extensive experience across Europe, the U.S. and Latin America: group FP&amp;A, finance transformation and building businesses between Europe and Paraguay.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<style>
+@font-face{font-family:"Montserrat";src:url(fonts/montserrat-400.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Montserrat";src:url(fonts/montserrat-500.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Montserrat";src:url(fonts/montserrat-600.woff2) format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"Montserrat";src:url(fonts/montserrat-700.woff2) format("woff2");font-weight:700;font-display:swap}
+/* Layout: one column of wide bands, ivory and graphite, gold used only for emphasis */
+:root{
+  --ivory:#F7F4EC; --paper:#FFFFFF; --ink:#24262B; --muted:#5E6066; --line:#E4E0D6;
+  --gold:#F0B42C; --amber:#9A6A00; --night:#24262B; --night-2:#2E3036; --night-fg:#F4F4F2; --night-muted:#B8B9BC;
+  --font:"Montserrat",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ivory);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.65}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:24px}
+h1,h2,h3{margin:0;line-height:1.15;text-wrap:balance;font-weight:700}
+h2{font-size:clamp(28px,3.4vw,40px);letter-spacing:-.01em}
+h3{font-size:19px;font-weight:600}
+p{margin:0}
+.eyebrow{display:block;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);margin-bottom:14px}
+section{padding-block:88px}
+.lead{font-size:19px;color:var(--muted);max-width:640px;margin-top:16px}
+
+/* header */
+.top{position:sticky;top:0;z-index:20;background:rgba(247,244,236,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;font-size:16px}
+.mono{width:34px;height:34px;border-radius:50%;background:var(--ink);color:var(--gold);display:grid;place-items:center;font-size:13px;font-weight:700;letter-spacing:.04em}
+.top nav{display:flex;gap:26px}
+.top nav a{text-decoration:none;font-size:14px;font-weight:500;color:var(--muted)}
+.top nav a:hover{color:var(--ink)}
+.menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:2px;padding:8px 12px;font:inherit;font-size:14px;cursor:pointer}
+@media (max-width:860px){
+  .top nav{display:none;position:absolute;top:68px;left:0;right:0;background:var(--ivory);flex-direction:column;gap:0;border-bottom:1px solid var(--line)}
+  .top nav.open{display:flex}
+  .top nav a{padding:14px 24px;border-top:1px solid var(--line)}
+  .menu-btn{display:block}
+}
+
+/* hero */
+.hero{padding-block:72px 64px}
+.hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(36px,5vw,58px);letter-spacing:-.02em}
+.hero h1 em{font-style:normal;color:var(--amber)}
+.hero .lead{font-size:20px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.btn{display:inline-block;text-decoration:none;font-size:15px;font-weight:600;padding:13px 22px;border-radius:2px;border:1.5px solid var(--ink)}
+.btn.primary{background:var(--ink);color:var(--paper)}
+.btn.primary:hover{background:#000}
+.btn.ghost{background:transparent}
+.btn.ghost:hover{background:var(--paper)}
+.portrait{position:relative}
+.portrait img{width:100%;height:auto;aspect-ratio:1/1.05;object-fit:cover;object-position:50% 30%;border-radius:2px}
+.portrait::after{content:"";position:absolute;left:-14px;bottom:-14px;width:46%;height:46%;border-left:3px solid var(--gold);border-bottom:3px solid var(--gold);pointer-events:none}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr;gap:36px}.portrait{max-width:340px}}
+
+/* proof strip */
+.proof{background:var(--night);color:var(--night-fg);padding-block:44px}
+.proof .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.proof b{display:block;font-size:30px;font-weight:700;color:var(--gold);line-height:1.1;font-variant-numeric:tabular-nums}
+.proof span{font-size:14px;color:var(--night-muted)}
+@media (max-width:860px){.proof .wrap{grid-template-columns:1fr 1fr}}
+
+/* about */
+.about .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px}
+.about .body p+p{margin-top:16px}
+.about .body{color:var(--muted)}
+.about .body strong{color:var(--ink);font-weight:600}
+@media (max-width:860px){.about .wrap{grid-template-columns:1fr;gap:20px}}
+
+/* services */
+.services{background:var(--paper)}
+.grid{display:grid;gap:20px;margin-top:40px}
+.g3{grid-template-columns:repeat(3,1fr)}
+@media (max-width:960px){.g3{grid-template-columns:1fr 1fr}}
+@media (max-width:620px){.g3{grid-template-columns:1fr}}
+.card{background:var(--ivory);padding:28px;display:grid;gap:10px;align-content:start;min-width:0}
+.card h3{display:flex;gap:12px;align-items:center}
+.card h3::before{content:"";width:12px;height:12px;border-radius:50%;background:var(--gold);border:2px solid var(--ink);flex:none}
+.card p{font-size:15px;color:var(--muted)}
+
+/* experience */
+.timeline{margin-top:40px;border-top:1px solid var(--line)}
+.role{display:grid;grid-template-columns:200px 1fr;gap:32px;padding-block:28px;border-bottom:1px solid var(--line)}
+.role .when{font-size:14px;font-weight:600;color:var(--amber);font-variant-numeric:tabular-nums}
+.role .where{font-size:14px;color:var(--muted);margin-top:2px}
+.role h3{margin-bottom:4px}
+.role ul{margin:12px 0 0;padding-left:18px;color:var(--muted);font-size:15px}
+.role li+li{margin-top:6px}
+@media (max-width:760px){.role{grid-template-columns:1fr;gap:6px}}
+
+/* ventures */
+.ventures{background:var(--night);color:var(--night-fg)}
+.ventures .eyebrow{color:var(--gold)}
+.ventures .lead{color:var(--night-muted)}
+.vgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:40px}
+@media (max-width:1000px){.vgrid{grid-template-columns:1fr 1fr}}
+@media (max-width:620px){.vgrid{grid-template-columns:1fr}}
+.vlink{color:var(--gold);font-size:14px;font-weight:600;text-decoration:none;margin-top:4px}
+.vcard{background:var(--night-2);padding:26px;display:grid;gap:8px;align-content:start}
+.vcard .tag{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.vcard p{font-size:15px;color:var(--night-muted)}
+.inkcta{margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;border:1px solid #44464C;padding:24px 26px}
+.inkcta p{color:var(--night-fg);max-width:620px}
+.btn.gold{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+
+/* credentials */
+.creds .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.list{list-style:none;margin:20px 0 0;padding:0;border-top:1px solid var(--line)}
+.list li{padding:14px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:16px;font-size:15px}
+.list li span{color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.list li b{font-weight:600}
+.kit{margin-top:20px;display:grid;gap:6px}
+.kit h3{font-size:16px;margin-top:12px;display:flex;gap:10px;align-items:center}
+.kit h3::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--gold);border:2px solid var(--ink);flex:none}
+.kit p{font-size:15px;color:var(--muted)}
+.list+.list{margin-top:24px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.chips span{font-size:13px;font-weight:500;background:var(--paper);border:1px solid var(--line);padding:6px 12px;border-radius:2px}
+@media (max-width:860px){.creds .wrap{grid-template-columns:1fr;gap:40px}}
+
+/* voices */
+.voices{background:var(--paper)}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+@media (max-width:900px){.quotes{grid-template-columns:1fr}}
+blockquote{margin:0;padding:26px;background:var(--ivory);border-left:3px solid var(--gold);font-size:16px}
+blockquote footer{margin-top:12px;font-size:13px;color:var(--muted)}
+
+/* writing */
+.writing .row{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:32px}
+@media (max-width:760px){.writing .row{grid-template-columns:1fr}}
+.wcard{display:block;text-decoration:none;background:var(--paper);padding:26px;border:1px solid var(--line)}
+.wcard:hover{border-color:var(--ink)}
+.wcard .tag{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--amber)}
+.wcard h3{margin-top:8px}
+.wcard p{margin-top:8px;font-size:15px;color:var(--muted)}
+
+/* contact */
+.contact{background:var(--night);color:var(--night-fg)}
+.contact .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px}
+.contact .eyebrow{color:var(--gold)}
+.contact .lead{color:var(--night-muted)}
+.contact .links{margin-top:28px;display:grid;gap:10px}
+.contact .links a{color:var(--gold);text-decoration:none;font-weight:600}
+form{display:grid;gap:14px}
+label{font-size:13px;font-weight:600;color:var(--night-muted)}
+input,textarea{width:100%;margin-top:6px;font:inherit;font-size:16px;color:var(--ink);background:var(--paper);border:1px solid transparent;border-radius:2px;padding:12px 14px}
+input:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:1px}
+@media (max-width:860px){.contact .wrap{grid-template-columns:1fr;gap:36px}}
+footer.site{background:#1B1C20;color:var(--night-muted);font-size:13px;padding-block:24px}
+footer.site .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer.site a{color:var(--night-muted)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
 </head>
-<body class="bg-white text-gray-800 font-sans">
-  <header class="bg-gray-900 text-white p-6 shadow">
-    <div class="container mx-auto flex justify-between items-center">
-      <h1 class="text-2xl font-bold">Pedro Gutierrez</h1>
-      <button class="md:hidden focus:outline-none" onclick="toggleMenu()">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
-      <nav id="nav-menu" class="hidden md:flex space-x-6 md:space-x-6 md:items-center">
-        <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
-          <li><a href="#about" class="hover:text-gray-300">About</a></li>
-          <li><a href="#services" class="hover:text-gray-300">Services</a></li>
-          <li><a href="#projects" class="hover:text-gray-300">Projects</a></li>
-          <li><a href="#education" class="hover:text-gray-300">Education</a></li>
-          <li><a href="#testimonials" class="hover:text-gray-300">Testimonials</a></li>
-          <li><a href="#articles" class="hover:text-gray-300">Articles</a></li>
-          <li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<body>
 
-  <section class="bg-white text-center py-20">
-    <div class="container mx-auto">
-      <h2 class="text-4xl font-bold mb-4">Finance. Transformation. Growth.</h2>
-      <p class="text-lg max-w-2xl mx-auto">Empowering companies to transform finance operations, streamline processes, and unlock strategic value — across Europe and Latin America.</p>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="mono">PG</span>Pedro Gutierrez</a>
+    <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav">
+      <a href="#about">About</a>
+      <a href="#services">What I do</a>
+      <a href="#experience">Experience</a>
+      <a href="#ventures">Ventures</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">Finance &amp; transformation leader</span>
+        <h1>I build and transform businesses, with finance as the <em>engine</em>.</h1>
+        <p class="lead">Extensive experience across Europe, the U.S. and Latin America: group FP&amp;A at Microsoft, finance transformation across 10 European entities, and companies I have founded or helped launch between Europe and Paraguay.</p>
+        <div class="ctas">
+          <a class="btn primary" href="#contact">Start a conversation</a>
+          <a class="btn ghost" href="#experience">See my experience</a>
+        </div>
+      </div>
+      <div class="portrait"><img src="profile.jpg" alt="Portrait of Pedro Gutierrez" width="900" height="984"></div>
     </div>
   </section>
 
-  
-  <section class="py-16 bg-gray-50">
-    <div class="container mx-auto px-6 text-center">
-      <img src="/profile.jpg" alt="Pedro Gutierrez" class="mx-auto rounded-full w-32 h-32 sm:w-48 sm:h-48 object-cover mb-4">
-      <h2 class="text-xl font-semibold">Pedro Gutierrez</h2>
-      <p class="text-gray-600">Finance Executive | Business Transformation | Strategy</p>
+  <div class="proof" aria-label="Key figures">
+    <div class="wrap">
+      <div><b>3 continents</b><span>finance leadership in Europe, the U.S. and Latin America</span></div>
+      <div><b>USD 14B</b><span>portfolio planned and forecast at Microsoft</span></div>
+      <div><b>10</b><span>European entities in the current transformation</span></div>
+      <div><b>2013</b><span>founded my first company, Polaris</span></div>
     </div>
-  </section>
-  
-  <section id="about" class="bg-gray-100 py-16">
-    <div class="container mx-auto px-6">
-      <h3 class="text-3xl font-semibold mb-6">About Me</h3>
-      <p class="text-lg max-w-3xl">
-        I’m Pedro Gutierrez, a multilingual finance executive with over 15 years of global experience across Europe, the U.S., and Latin America. I specialize in driving business transformation, ERP integration, and cash flow optimization to help companies achieve strategic clarity and measurable results.
-      </p>
-      <p class="text-lg max-w-3xl mt-4">
-        As Finance Project Manager at REPA Group, I’m currently leading a company-wide Net Working Capital initiative that’s improving DSO by 10% and streamlining financial consolidation across 10 European entities into US GAAP via OneStream.
-      </p>
-      <p class="text-lg max-w-3xl mt-4">
-        Previously, I held key finance roles in multinational companies including <strong>Microsoft</strong>, where I supported financial strategy and operations under the CFO of the $14B Server & Tools business group, leading global reporting, budgeting processes, and incentive compensation planning. At <strong>Sabre</strong>, I led cost restructuring efforts and delivered financial insights for Sales Planning across North America and Latin America.
-      </p>
-      <p class="text-lg max-w-3xl mt-4">
-        I bring a rare combination of corporate discipline, startup innovation, and cross-border finance expertise. My leadership approach is grounded in transparency, adaptability, and long-term thinking.
-      </p>
-    </div>
-  </section>
+  </div>
 
-  <section id="services" class="py-16">
-    <div class="container mx-auto px-6">
-      <h3 class="text-3xl font-semibold mb-6">Services</h3>
-      <ul class="space-y-4 text-lg">
-        <li><strong>Finance Transformation Consulting:</strong> DSO reduction, ERP upgrades, AR optimization, cash flow strategy.</li>
-        <li><strong>FinOps, AI & Machine Learning Applications:</strong> Deep experience in FinOps tools and predictive analytics to drive financial efficiency and intelligent automation.</li>
-        <li><strong>Business Development & Expansion:</strong> Strategy execution, market entry advisory, and scaling finance operations in new regions.</li>
-        <li><strong>Business Plan & Model Consulting:</strong> Crafting scalable and investor-ready plans for startups and transformation projects.</li>
-        <li><strong>Mentoring & Leadership Coaching:</strong> Supporting professionals through transitions and growth journeys.</li>
-        <li><strong>Real Estate Investment Advisory:</strong> Connecting European investors to Paraguayan opportunities.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="projects" class="bg-gray-100 py-16">
-    <div class="container mx-auto px-6">
-      <h3 class="text-3xl font-semibold mb-4">Projects</h3>
-      <ul class="list-disc pl-5 space-y-2 text-lg">
-        <li>Leading DSO optimization at REPA across EU regions</li>
-        <li>ERP & BI system implementation (Navision, Qlik, SAP)</li>
-        <li>Post-merger integration at Ciao GmbH into Microsoft’s corporate structure</li>
-        <li>Launching a real estate platform for Paraguay investments</li>
-        <li>Writing a book based on daily reflections — "Proyecto365"</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="education" class="py-16">
-    <div class="container mx-auto px-6">
-      <h3 class="text-3xl font-semibold mb-6">Education & Credentials</h3>
-      <ul class="list-disc pl-5 space-y-2 text-lg">
-        <li>SAP S/4 HANA Consultant Financial Accounting (FI) und Key User Controlling (CO) – GFN, Walldorf, 2023</li>
-        <li>M.B.A with a focus on Finance - TCU University, Fort Worth Texas, 2004</li>
-        <li>Professional Certificate: Business Plan and Model Consultant - Universidad de Salamanca, 2022</li>
-        <li>Financial Modeling and Valuation Analyst - Corporate Finance Institute® (CFI), 2020</li>
-        <li>Theory and Tools of Negotiation with the Harvard Methodology - CSI Interser, 2018</li>
-        <li>Leadership Training for Managers - Dale Carnegie, 2009</li>
-        <li>Bachelor's Degree in Business and Economics – University of Texas, Austin, 1997</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="testimonials" class="bg-gray-100 py-16">
-    <div class="container mx-auto px-6">
-      <h3 class="text-3xl font-semibold mb-6">Testimonials</h3>
-      <div class="space-y-6 text-lg">
-        <blockquote class="border-l-4 border-blue-600 pl-4 italic">“Pedro is a true finance leader with the rare ability to combine operational excellence and strategic vision.” – LinkedIn Recommendation</blockquote>
-        <blockquote class="border-l-4 border-blue-600 pl-4 italic">“Pedro is a very sharp, hardworking professional capable of learning on the fly and delivering excellent results.” – LinkedIn Recommendation</blockquote>
-        <blockquote class="border-l-4 border-blue-600 pl-4 italic">“Pedro is unfailingly positive, calm and focused on doing the right thing. He is open to new ideas and feedback, a great team player, articulate, and a real pleasure to partner with” – LinkedIn Recommendation</blockquote>        
-        <blockquote class="border-l-4 border-blue-600 pl-4 italic">“He brought structure, process, and deep financial insight to our operations. A natural mentor and business partner.” – LinkedIn Recommendation</blockquote>
-        <blockquote class="border-l-4 border-blue-600 pl-4 italic">“I had the pleasure to work with Pedro on international projects. His cross-cultural and cross-functional agility is a real asset.” – LinkedIn Recommendation</blockquote>
+  <section class="about" id="about">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">About</span>
+        <h2>Corporate discipline, founder's instinct</h2>
+      </div>
+      <div class="body">
+        <p>I'm a Paraguayan-born finance executive based in Germany. My work sits where finance meets change: <strong>transforming how finance runs</strong>, <strong>steering performance with clear numbers</strong>, and <strong>building new businesses</strong> from the first business case onwards.</p>
+        <p>At REPA (Parts Town Europe) I lead finance transformation across 10 European legal entities, including OneStream consolidation, management reporting and a group-wide Order-to-Cash program that improved DSO by 7% year over year. Before that I planned and forecast a USD 14B portfolio at Microsoft, and held full P&amp;L responsibility for a USD 52M digital business at Ciao GmbH, a Microsoft company.</p>
+        <p>Alongside my corporate career I build companies. In 2013 I founded Polaris, my first company, then co-founded Prestamena and Infinita and helped Negociable come to life. That is when I realised that developing businesses was what I did best, and I gave it a name: inkubeitor. I work in Spanish, English and German.</p>
       </div>
     </div>
   </section>
 
-  <div class="mb-6">
-  <h4 class="text-2xl font-semibold mb-2">Featured Video</h4>
-  <div class="aspect-w-16 aspect-h-9">
-    <iframe 
-      class="w-full h-64 md:h-96 rounded"
-      src="https://www.youtube.com/embed/norYyYUaJjs" 
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-  </div>
-</div>
-
-  <section id="articles" class="py-16">
-    <div class="container mx-auto px-6">
-      <h3 class="text-3xl font-semibold mb-6">Articles & Insights</h3>
-      <ul class="list-disc pl-5 space-y-2 text-lg">
-  <li>
-    <a href="https://www.google.com/search?q=un+paraguayo+en+el+imperio+de+bill+gates" 
-       class="text-blue-600 hover:underline" 
-       target="_blank">
-      Un paraguayo en el imperio de Bill Gates
-    </a>
-  </li>
-  <li><a href="https://www.prestamena.com" class="text-blue-600 hover:underline" target="_blank">The Future of Fintech in Latin America</a></li>
-  <li><a href="https://www.prestamena.com" class="text-blue-600 hover:underline" target="_blank">How AI is Shaping Financial Services</a></li>
-  <li><a href="https://www.prestamena.com" class="text-blue-600 hover:underline" target="_blank">Microloans and Impact Financing: Lessons from Paraguay</a></li>
-</ul>
+  <section class="services" id="services">
+    <div class="wrap">
+      <span class="eyebrow">What I do</span>
+      <h2>Where I add the most value</h2>
+      <p class="lead">For companies that need senior finance judgment, as a leader in the team or on a defined mandate.</p>
+      <div class="grid g3">
+        <article class="card"><h3>Finance transformation</h3><p>Order-to-Cash, working capital, ERP and consolidation programs that change how finance runs, not only what it reports.</p></article>
+        <article class="card"><h3>FP&amp;A and performance</h3><p>Budgeting, forecasting, KPI design and variance analysis that give leadership numbers they can steer by.</p></article>
+        <article class="card"><h3>Interim and part-time CFO support</h3><p>Senior finance leadership on a part-time or interim basis for growing companies: cash, planning, reporting and investor readiness.</p></article>
+        <article class="card"><h3>AI in finance</h3><p>Practical use of automation and AI in reporting, forecasting and finance processes, grounded in experience with AI-driven finance tools.</p></article>
+        <article class="card"><h3>Business cases and ventures</h3><p>Market analysis, opportunity ranking and investor-ready business cases, through inkubeitor.</p></article>
+        <article class="card"><h3>Mentoring</h3><p>Coaching finance professionals through career transitions and first leadership roles.</p></article>
+      </div>
     </div>
   </section>
 
-   <section id="contact" class="py-16 bg-gray-100">
-    <div class="container mx-auto max-w-2xl px-4">
-      <h2 class="text-3xl font-semibold text-center mb-8">Get in Touch</h2>
-      
-      <form action="https://formsubmit.co/contact@pedrogutierrez.pro" method="POST" class="space-y-6">
+  <section id="experience">
+    <div class="wrap">
+      <span class="eyebrow">Experience</span>
+      <h2>A career between corporate finance and building companies</h2>
+      <div class="timeline">
+        <div class="role">
+          <div><div class="when">Nov 2024 – present</div><div class="where">Bergkirchen / Munich</div></div>
+          <div><h3>Senior Manager Project Finance · REPA Deutschland (Parts Town Europe)</h3>
+            <ul><li>Lead finance transformation across 10 European legal entities: FP&amp;A, reporting, working capital governance and scalable processes.</li>
+            <li>Advise the CFO on investment analysis and program steering, including oversight of a EUR 60M transformation budget.</li>
+            <li>Guide a group-wide Order-to-Cash program that improved DSO by 7% year over year; support OneStream consolidation and US GAAP reporting.</li></ul></div>
+        </div>
+        <div class="role">
+          <div><div class="when">2022 – 2024</div><div class="where">Berlin · Walldorf · Bensheim</div></div>
+          <div><h3>Controlling, consulting and AI in finance</h3>
+            <ul><li>Senior Financial Controller (contract), QN Europe: redesigned 10 sales and performance KPIs, improving forecast accuracy by 15% and cutting sales reporting time by two days across European markets.</li>
+            <li>Independent consultant to three technology startups: improved cash flow by 10% for one client, cut reporting time by 8% for another and implemented a new budgeting process for a third.</li>
+            <li>Financial Solutions Consultant, Hypatos: partnered with CFOs and finance leaders on AI-driven finance automation; led RFPs, demos and executive presentations.</li></ul></div>
+        </div>
+        <div class="role">
+          <div><div class="when">2017 – 2022</div><div class="where">Asunción · Heidelberg</div></div>
+          <div><h3>Finance leadership and accounting transformation</h3>
+            <ul><li>Director of Finance, Administration &amp; IT, J. Fleischman Group (220 employees): led Finance, Accounting and IT with 26 reports, cut borrowing costs by approximately USD 2M through bank renegotiation and reduced departmental operating costs by 14%.</li>
+            <li>Project Lead, SRH Shared Services: migrated 11,000 suppliers into SAP, raised invoice-to-pay efficiency by 9% and reduced vendor duplicates by 12%.</li></ul></div>
+        </div>
+        <div class="role">
+          <div><div class="when">2013 – 2017</div><div class="where">Asunción</div></div>
+          <div><h3>Founder · Polaris, Prestamena, Infinita Soluciones Informáticas</h3>
+            <ul><li>Founded Polaris in 2013, my first company, for trade and investment between Europe and Paraguay.</li>
+            <li>Co-founded Prestamena and grew it to approximately 8,000 members and over USD 4M in loan requests.</li>
+            <li>Co-founded Infinita, building ERP solutions for many industries with a focus on the financial sector; helped launch and incubate Negociable.</li></ul></div>
+        </div>
+        <div class="role">
+          <div><div class="when">2006 – 2012</div><div class="where">Seattle · Munich</div></div>
+          <div><h3>Microsoft and Ciao GmbH, a Microsoft company</h3>
+            <ul><li>Senior Finance Manager, Server &amp; Tools: planning, budgeting and forecasting for a USD 14B portfolio of 13 products; worldwide incentive programs totaling USD 600M.</li>
+            <li>Acting CFO / Finance Team Lead at Ciao after the Microsoft acquisition: full P&amp;L for a USD 52M digital business, a team of 12, HGB-to-US GAAP conversion and post-merger integration.</li></ul></div>
+        </div>
+        <div class="role">
+          <div><div class="when">8 years, until 2006</div><div class="where">North and Latin America</div></div>
+          <div><h3>Sabre</h3>
+            <ul><li>Led cost restructuring efforts and delivered financial insights for Sales Planning across North America and Latin America.</li></ul></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ventures" id="ventures">
+    <div class="wrap">
+      <span class="eyebrow">Ventures</span>
+      <h2>Building companies since 2013</h2>
+      <p class="lead">It started with Polaris in 2013. After helping Prestamena, Infinita and Negociable come to life, I gave this way of developing businesses a name: inkubeitor, today the venture studio of the Polaris group.</p>
+      <div class="vgrid">
+        <div class="vcard"><span class="tag">2013 · Trade &amp; investment</span><h3>Polaris</h3><p>My first company: trade and investment between Europe and Paraguay, through Polaris S.A.</p><a class="vlink" href="https://www.polaris-paraguay.com" target="_blank" rel="noopener">polaris-paraguay.com →</a></div>
+        <div class="vcard"><span class="tag">Fintech · Lending</span><h3>Prestamena</h3><p>Digital lending platform in Paraguay; approximately 8,000 members and over USD 4M in loan requests.</p></div>
+        <div class="vcard"><span class="tag">Technology · ERP</span><h3>Infinita Soluciones Informáticas</h3><p>ERP for many industries, with a focus on the financial sector.</p></div>
+        <div class="vcard"><span class="tag">Marketplace · M&amp;A</span><h3>Negociable</h3><p>Online platform for buying and selling businesses; incubated for a year, then spun out.</p></div>
+      </div>
+      <div class="inkcta">
+        <p>Current focus: market analysis and business cases between Europe and Paraguay, starting with the Paraguayan pork industry.</p>
+        <a class="btn gold" href="https://inkubeitor.com" target="_blank" rel="noopener">Visit inkubeitor.com</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="creds" id="credentials">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">Credentials</span>
+        <h2>Certifications and education</h2>
+        <ul class="list">
+          <li><b>CAPM, Certified Associate in Project Management · PMI</b><span>2026</span></li>
+          <li><b>SAP S/4HANA FI Consultant / Key User CO · GFN Walldorf</b><span>2023</span></li>
+          <li><b>Business Plan and Model Consultant · Universidad de Salamanca</b><span>2022</span></li>
+          <li><b>Financial Modeling &amp; Valuation Analyst · CFI</b><span>2020</span></li>
+          <li><b>Theory and Tools of Negotiation, Harvard methodology · CSI Interser</b><span>2018</span></li>
+          <li><b>Leadership Training for Managers · Dale Carnegie</b><span>2009</span></li>
+        </ul>
+        <ul class="list">
+          <li><b>MBA, Finance · Texas Christian University</b><span>USA</span></li>
+          <li><b>Bachelor's, Business Economics · University of Texas at Austin</b><span>USA</span></li>
+        </ul>
+      </div>
+      <div>
+        <span class="eyebrow">Toolkit</span>
+        <h2>What I am good at</h2>
+        <div class="kit">
+          <h3>Finance transformation</h3>
+          <p>Order-to-Cash and working capital · process redesign · ERP change · consolidation · post-merger integration · IPO readiness</p>
+          <h3>FP&amp;A and performance</h3>
+          <p>Budgeting and forecasting · KPI design · variance and profitability analysis · financial modeling · cash and liquidity</p>
+          <h3>Business development and venture building</h3>
+          <p>Market analysis · opportunity ranking · business cases · founding and launching companies · partnerships between Europe and Paraguay</p>
+          <h3>Leadership</h3>
+          <p>CFO advisory · business partnering · stakeholder management · negotiation · leading finance and IT teams</p>
+        </div>
+        <div class="chips"><span>OneStream</span><span>SAP S/4HANA FI/CO</span><span>Qlik</span><span>Navision</span><span>Salesforce</span><span>Excel</span><span>HGB · US GAAP</span></div>
+        <ul class="list">
+          <li><b>Spanish</b><span>Native</span></li>
+          <li><b>English</b><span>Fluent</span></li>
+          <li><b>German</b><span>Proficient</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="voices">
+    <div class="wrap">
+      <span class="eyebrow">Recommendations</span>
+      <h2>What colleagues say</h2>
+      <div class="quotes">
+        <blockquote>“Pedro is a true finance leader with the rare ability to combine operational excellence and strategic vision.”<footer>LinkedIn recommendation</footer></blockquote>
+        <blockquote>“He brought structure, process, and deep financial insight to our operations. A natural mentor and business partner.”<footer>LinkedIn recommendation</footer></blockquote>
+        <blockquote>“I had the pleasure to work with Pedro on international projects. His cross-cultural and cross-functional agility is a real asset.”<footer>LinkedIn recommendation</footer></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="writing">
+    <div class="wrap">
+      <span class="eyebrow">Writing and media</span>
+      <h2>Beyond the numbers</h2>
+      <div class="row">
+        <a class="wcard" href="https://www.youtube.com/watch?v=norYyYUaJjs" target="_blank" rel="noopener"><span class="tag">Video</span><h3>Featured talk</h3><p>Watch on YouTube.</p></a>
+        <div class="wcard"><span class="tag">Book project</span><h3>Proyecto365</h3><p>A daily practice of photography and reflection, written in Spanish and English.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">Contact</span>
+        <h2>Let's talk</h2>
+        <p class="lead">About a transformation, a finance role, or a business case between Europe and Paraguay.</p>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/pgutierrez" target="_blank" rel="noopener">LinkedIn →</a>
+          <a href="https://inkubeitor.com" target="_blank" rel="noopener">inkubeitor.com →</a>
+        </div>
+      </div>
+      <form action="https://formsubmit.co/contact@pedrogutierrez.pro" method="POST">
         <input type="hidden" name="_next" value="https://www.pedrogutierrez.pro/thank-you.html">
-
-        <div>
-          <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-          <input type="text" name="name" id="name" required
-                 class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-indigo-200 focus:outline-none">
-        </div>
-
-        <div>
-          <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-          <input type="email" name="email" id="email" required
-                 class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-indigo-200 focus:outline-none">
-        </div>
-
-        <div>
-          <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
-          <textarea name="message" id="message" rows="4" required
-                    class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-indigo-200 focus:outline-none"></textarea>
-        </div>
-
-        <div class="text-center">
-          <button type="submit"
-                  class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700">
-            Send
-          </button>
-        </div>
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <div><label for="name">Name</label><input id="name" name="name" type="text" required autocomplete="name"></div>
+        <div><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email"></div>
+        <div><label for="message">Message</label><textarea id="message" name="message" rows="5" required></textarea></div>
+        <div><button class="btn gold" type="submit">Send message</button></div>
       </form>
     </div>
   </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>© 2026 Pedro Gutierrez</span>
+    <span><a href="https://inkubeitor.com" target="_blank" rel="noopener">inkubeitor</a> · <a href="https://www.polaris-paraguay.com" target="_blank" rel="noopener">Polaris</a></span>
+  </div>
+</footer>
+
+<script>
+  var b = document.getElementById('menu-btn'), n = document.getElementById('nav');
+  b.addEventListener('click', function () { var o = n.classList.toggle('open'); b.setAttribute('aria-expanded', o); });
+  n.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { n.classList.remove('open'); b.setAttribute('aria-expanded', false); }); });
+</script>
 </body>
 </html>
