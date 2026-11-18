@@ -1,0 +1,7 @@
+{
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/de/", "destination": "/de", "permanent": true },
+    { "source": "/de/danke.html", "destination": "/danke", "permanent": true }
+  ]
+}
