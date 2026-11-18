@@ -5,12 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pedro Gutierrez · Finance &amp; transformation leader</title>
 <meta name="description" content="Pedro Gutierrez is a finance and transformation leader with extensive experience across Europe, the U.S. and Latin America: group FP&amp;A, finance transformation and building businesses between Europe and Paraguay.">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="alternate" hreflang="en" href="https://www.pedrogutierrez.pro/">
+<link rel="alternate" hreflang="de" href="https://www.pedrogutierrez.pro/de/">
+<link rel="alternate" hreflang="x-default" href="https://www.pedrogutierrez.pro/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <style>
-@font-face{font-family:"Montserrat";src:url(fonts/montserrat-400.woff2) format("woff2");font-weight:400;font-display:swap}
-@font-face{font-family:"Montserrat";src:url(fonts/montserrat-500.woff2) format("woff2");font-weight:500;font-display:swap}
-@font-face{font-family:"Montserrat";src:url(fonts/montserrat-600.woff2) format("woff2");font-weight:600;font-display:swap}
-@font-face{font-family:"Montserrat";src:url(fonts/montserrat-700.woff2) format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"Montserrat";src:url(/fonts/montserrat-400.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Montserrat";src:url(/fonts/montserrat-500.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Montserrat";src:url(/fonts/montserrat-600.woff2) format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"Montserrat";src:url(/fonts/montserrat-700.woff2) format("woff2");font-weight:700;font-display:swap}
 /* Layout: one column of wide bands, ivory and graphite, gold used only for emphasis */
 :root{
   --ivory:#F7F4EC; --paper:#FFFFFF; --ink:#24262B; --muted:#5E6066; --line:#E4E0D6;
@@ -160,6 +163,10 @@ input:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:1px}
 footer.site{background:#1B1C20;color:var(--night-muted);font-size:13px;padding-block:24px}
 footer.site .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 footer.site a{color:var(--night-muted)}
+.lang{display:flex;gap:6px;font-size:13px;font-weight:600;letter-spacing:.06em}
+.lang a{text-decoration:none;color:var(--muted);padding:4px 6px}
+.lang a[aria-current]{color:var(--ink);border-bottom:2px solid var(--gold)}
+.right{display:flex;align-items:center;gap:22px}
 :focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
@@ -169,6 +176,8 @@ footer.site a{color:var(--night-muted)}
 <header class="top">
   <div class="wrap">
     <a class="brand" href="#top"><span class="mono">PG</span>Pedro Gutierrez</a>
+    <div class="right">
+    <div class="lang"><a href="/" aria-current="page" lang="en">EN</a><a href="/de/" lang="de">DE</a></div>
     <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
     <nav id="nav">
       <a href="#about">About</a>
@@ -178,6 +187,7 @@ footer.site a{color:var(--night-muted)}
       <a href="#credentials">Credentials</a>
       <a href="#contact">Contact</a>
     </nav>
+    </div>
   </div>
 </header>
 
@@ -193,7 +203,7 @@ footer.site a{color:var(--night-muted)}
           <a class="btn ghost" href="#experience">See my experience</a>
         </div>
       </div>
-      <div class="portrait"><img src="profile.jpg" alt="Portrait of Pedro Gutierrez" width="900" height="984"></div>
+      <div class="portrait"><img src="/profile.jpg" alt="Portrait of Pedro Gutierrez" width="900" height="984"></div>
     </div>
   </section>
 
@@ -295,7 +305,7 @@ footer.site a{color:var(--night-muted)}
         <div class="vcard"><span class="tag">Marketplace · M&amp;A</span><h3>Negociable</h3><p>Online platform for buying and selling businesses; incubated for a year, then spun out.</p></div>
       </div>
       <div class="inkcta">
-        <p>Current focus: market analysis and business cases between Europe and Paraguay, starting with the Paraguayan pork industry.</p>
+        <p>inkubeitor assesses markets, explores brands and partners, and builds business cases between Europe and Paraguay.</p>
         <a class="btn gold" href="https://inkubeitor.com" target="_blank" rel="noopener">Visit inkubeitor.com</a>
       </div>
     </div>
@@ -378,8 +388,10 @@ footer.site a{color:var(--night-muted)}
       </div>
       <form action="https://formsubmit.co/contact@pedrogutierrez.pro" method="POST">
         <input type="hidden" name="_next" value="https://www.pedrogutierrez.pro/thank-you.html">
+        <input type="hidden" name="_subject" value="New message via pedrogutierrez.pro">
+        <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_captcha" value="false">
-        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div><label for="name">Name</label><input id="name" name="name" type="text" required autocomplete="name"></div>
         <div><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email"></div>
         <div><label for="message">Message</label><textarea id="message" name="message" rows="5" required></textarea></div>
@@ -391,7 +403,7 @@ footer.site a{color:var(--night-muted)}
 
 <footer class="site">
   <div class="wrap">
-    <span>© 2026 Pedro Gutierrez</span>
+    <span>© 2026 Pedro Gutierrez · <a href="/impressum.html">Impressum</a> · <a href="/datenschutz.html">Datenschutz</a></span>
     <span><a href="https://inkubeitor.com" target="_blank" rel="noopener">inkubeitor</a> · <a href="https://www.polaris-paraguay.com" target="_blank" rel="noopener">Polaris</a></span>
   </div>
 </footer>
